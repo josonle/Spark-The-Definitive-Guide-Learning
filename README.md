@@ -1,5 +1,7 @@
-# Spark-The-Definitive-Gui-Learning
+# Spark-The-Definitive-Guide-Learning
 《Spark: The Definitive Guide Big Data Processing Made Simple》学习记录
+
+同步更新在掘金：[![](https://badge.juejin.im/entry/5cd3e8036fb9a03247157541/likes.svg?style=plastic)](https://juejin.im/post/5cd3dc06e51d456e2d69a83e)
 ## 前言
 本书出自OReilly的[《Spark: The Definitive Guide Big Data Processing Made Simple》](http://shop.oreilly.com/product/0636920034957.do)，由Matei Zaharia, Bill Chambers两位大佬所写，是2018年2月的第一版（我也不清楚有没有最新版，搜也没搜到第二版）
 
