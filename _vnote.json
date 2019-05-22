@@ -1,0 +1,24 @@
+{
+    "created_time": "2019-05-16T04:14:13Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-05-16T04:14:13Z",
+            "modified_time": "2019-05-22T12:11:10Z",
+            "name": "README.md",
+            "tags": [
+            ]
+        }
+    ],
+    "sub_directories": [
+        {
+            "name": "PartI：大数据和Spark概述"
+        },
+        {
+            "name": "PartII：结构化API-DataFrames,SQL和DataSets"
+        }
+    ],
+    "version": "1"
+}
