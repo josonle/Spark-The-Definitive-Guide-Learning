@@ -31,10 +31,46 @@ OReilly它家的书都是把代码和案例放在github上的，这本书也不�
   - Chapter 1 to 2：了解Apache Spark
   - Chapter 3：了解Spark的工具集
 - 结构化API——DataFrames, SQL, and Datasets
-  - Chapter 4：结构化API预览
-  - Chapter 5：基本结构化API操作
+  - [Chapter 4：结构化API预览](https://juejin.im/post/5ce8de846fb9a07ed136b120)
+  - [Chapter 5：基本结构化API操作](https://juejin.im/post/5ce7e98a6fb9a07ea712ebd2)
+  - Chapter 6：处理不同类型的数据
+  - Chapter 7：聚合操作
+  - Chapter 8：join 连接操作
+  - Chapter 9：数据源
+  - Chapter 10：Spark SQL 用 SQL 来操作
 - 底层API
+  - Chapter 12：弹性分布式数据集（RDDs）
+  - Chapter 13：高级的 RDDs
+  - Chapter 14：分布式共享变量
 - 生产上的应用
+  - Chapter 15：Spark 如何在集群上运行
+  - Chapter 16：开发 Spark 应用程序
+  - Chapter 17：部署 Spark
+  - Chapter 18：监控和调试
+  - Chapter 19：性能调优
 - Streaming流
+  - Chapter 20：Stream 流处理基础
+  - Chapter 21：结构化Streaming流的基础
+  - Chapter 22：事件时间（Event-time）和状态处理
+  - Chapter 23：生产中的结构化流处理
 - 高级数据分析和机器学习
+  - Chapter 24：高级分析和机器学习预览
+  - Chapter 25：预处理和特征工程
+  - Chapter 26：分类
+  - Chapter 27：回归
+  - Chapter 28：Recommendation 推荐
+  - Chapter 29：非监督性学习
+  - Chapter 30：图分析
+  - Chapter 31：深度学习
 - Spark 生态
+  - Chapter 32：语言细节: Python (PySpark)和 r (SparkR 和 sparklyr)
+  - Chapter 33：生态和社区
+
+***
+### foot
+收录于此：[josonle/Spark-The-Definitive-Guide-Learning](https://github.com/josonle/Spark-The-Definitive-Guide-Learning)
+
+>更多推荐：
+[Coding Now](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fjosonle%2FCoding-Now)
+>
+>学习记录的一些笔记，以及所看得一些电子书eBooks、视频资源和平常收纳的一些自己认为比较好的博客、网站、工具。涉及大数据几大组件、Python机器学习和数据分析、Linux、操作系统、算法、网络等
