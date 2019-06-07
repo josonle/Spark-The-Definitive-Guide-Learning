@@ -23,7 +23,7 @@ res1: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTR
 
 一个自定义Schema的例子，具体就是先引入相关类`StructType`,`StructField`和相应内置数据类型（Chapter 4中提及的Spark Type），然后定义自己的Schema，最后就是读入数据是通过schema方法指定自己定义的Schema
 ```scala
-scala> import org.apache.spark.sql.types.{StructType,StructField,StringType,LongType}
+scala> import org.apache.spark.sql.types.{StructType,StructField,StringType,LongType,ArrayType}
 import org.apache.spark.sql.types.{StructType, StructField, StringType, LongType}
 
 scala> val mySchema = StructType(Array(
@@ -41,6 +41,29 @@ root
  |-- DEST_COUNTRY_NAME: string (nullable = true)
  |-- ORIGIN_COUNTRY_NAME: string (nullable = true)
  |-- count: long (nullable = true)
+ 
+# 如何申明一个包含复杂数据类型 Array、Map、Struct 的Schema
+scala> val mySchema = new StructType(
+     | Array(new StructField("id",IntegerType,true),
+     | new StructField("qq_id",ArrayType(StringType,true),true))
+     | )
+mySchema: org.apache.spark.sql.types.StructType = StructType(StructField(id,IntegerType,true), StructField(qq_id,ArrayType(StringType,true),true))
+
+scala> val rows = Seq(Row(1,Array("123","456")),Row(2,Array("999","666")))
+rows: Seq[org.apache.spark.sql.Row] = List([1,[Ljava.lang.String;@68a6e236], [2,[Ljava.lang.String;@b82b59c])
+
+scala> val rdd = spark.sparkContext.parallelize(rows)
+rdd: org.apache.spark.rdd.RDD[org.apache.spark.sql.Row] = ParallelCollectionRDD[0] at parallelize at <console>:28
+
+scala> val df = spark.createDataFrame(rdd,mySchema)
+df: org.apache.spark.sql.DataFrame = [id: int, qq_id: array<string>]
+scala> df.show
++---+----------+
+| id|     qq_id|
++---+----------+
+|  1|[123, 456]|
+|  2|[999, 666]|
++---+----------+
 ```
 
 看这里StringType、LongType，其实就是Chapter 4中谈过的Spark Type。还有就是上面自定义Schema真正用来的是把RDD转换为DataFrame，[参见之前的笔记](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(8)RDD%E5%A6%82%E4%BD%95%E8%BD%AC%E5%8C%96%E4%B8%BADataFrame.md#%E6%96%B9%E6%B3%95%E4%BA%8C%E5%9F%BA%E4%BA%8E%E7%BC%96%E7%A8%8B%E6%96%B9%E5%BC%8F)
@@ -97,6 +120,9 @@ res14: Boolean = true
 
 scala> myRow.getString(0)
 res15: String = China
+
+# 获取Array<String>
+scala> row.getAs[Seq[String]](col)
 
 scala> myRow(0).asInstanceOf[String]
 res16: String = China
