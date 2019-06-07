@@ -1,7 +1,8 @@
 # Spark-The-Definitive-Guide-Learning
 《Spark: The Definitive Guide Big Data Processing Made Simple》学习记录
 
-同步更新在掘金：[![](https://badge.juejin.im/entry/5cd3e8036fb9a03247157541/likes.svg?style=plastic)](https://juejin.im/post/5cd3dc06e51d456e2d69a83e)
+同步更新在掘金：[《Spark 权威指南学习计划》](https://juejin.im/post/5cd3dc06e51d456e2d69a83e)
+
 ## 前言
 本书出自OReilly的[《Spark: The Definitive Guide Big Data Processing Made Simple》](http://shop.oreilly.com/product/0636920034957.do)，由Matei Zaharia, Bill Chambers两位大佬所写，是2018年2月的第一版（我也不清楚有没有最新版，搜也没搜到第二版）
 ![Spark: The Definitive Guide](https://images-na.ssl-images-amazon.com/images/I/51z7TzI-Y3L._SX379_BO1,204,203,200_.jpg)
@@ -25,6 +26,7 @@ OReilly它家的书都是把代码和案例放在github上的，这本书也不�
 > - 计划第1、2、3章
 >   - 计划作废，和大多书一样前面内容都是总览性内容，实际性的东西也很杂，所以先放置待后期补上吧
 > - 计划4、5、6章吧，（～5.26）
+> - 计划7、8、9、10章 （～6.14）
 
 书籍分为以下七大部分：
 - 大数据和Spark概述
@@ -33,7 +35,7 @@ OReilly它家的书都是把代码和案例放在github上的，这本书也不�
 - 结构化API——DataFrames, SQL, and Datasets
   - [Chapter 4：结构化API预览](https://juejin.im/post/5ce8de846fb9a07ed136b120)
   - [Chapter 5：基本结构化API操作](https://juejin.im/post/5ce7e98a6fb9a07ea712ebd2)
-  - Chapter 6：处理不同类型的数据
+  - [Chapter 6：处理不同类型的数据](https://juejin.im/post/5cf9bba8f265da1bd146490f)
   - Chapter 7：聚合操作
   - Chapter 8：join 连接操作
   - Chapter 9：数据源
