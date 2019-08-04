@@ -168,6 +168,27 @@ scala> df.agg(collect_set("country"),collect_list("Country")).show
 +--------------------+---------------------+
 
 ```
+### 在表达式中使用分组（Grouping with Expressions）
+表达式中使用和使用agg函数都是一样用的
+```scala
+// in Scala
+import org.apache.spark.sql.functions.count
+
+df.groupBy("InvoiceNo").agg(
+  count("Quantity").alias("quan"),
+  expr("count(Quantity)")).show()
+```
+### 通过Maps映射使用分组（Grouping with Maps）
+
+有时，可以更容易地将转换指定为一系列映射，其中Key为列，Value为希望执行的聚合函数(以字符串形式)。 如果你在行内指定多个列名，你也可以重复使用它们:
+```scala
+df.groupBy("InvoiceNo").agg("Quantity"->"avg","UnitPrice"->"max").show
+df.groupBy("InvoiceNo").agg(expr("mean(Quantity)"),expr("max(UnitPrice)")).show
+
+# sql
+spark.sql("select mean(Quantity),max(UnitPrice) from dfTable group by InvoiceNo").show
+```
+
 ## 窗口函数
 
 ## 分组集（Grouping Sets）
